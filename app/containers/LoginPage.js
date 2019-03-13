@@ -1,0 +1,23 @@
+import { connect } from 'react-redux';
+import { push } from 'react-router-redux';
+import { bindActionCreators } from 'redux';
+import Login from '../components/Login';
+import userActions from '../actions/user';
+
+const mapStateToProps = (state) => {
+	console.log("mapStatetoProps",state);
+  return state;
+};
+
+const mapDispatchToProps = (dispatch) => {
+	console.log("mapDispatchToProps");
+  const user = bindActionCreators(userActions, dispatch);
+  return {
+    onLogin: (data) => {
+      user.login(data);
+      dispatch(push('/loggedin'));
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

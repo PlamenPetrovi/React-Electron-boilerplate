@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../app/actions/api_host.js"],"names":["UpdateApi"],"mappings":";;;;;;AAAA;;kBAEe;AACbA,aAAW,gCAAa,WAAb;AADE,C","file":"api_host.js","sourcesContent":["import { createAction } from 'redux-actions';\r\n\r\nexport default {\r\n  UpdateApi: createAction('UpdateApi'),\r\n};\r\n"]}
